@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { RectButton } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
   flex: 1;
@@ -37,11 +38,11 @@ export const Bio = styled.Text.attrs({
 `;
 
 export const Stars = styled.FlatList.attrs({
-  showVerticalScrollIndicator: false,
+  showsVerticalScrollIndicator: true,
 })`
   margin-top: 20px;
 `;
-export const Starred = styled.View`
+export const Starred = styled(RectButton)`
   background: #f5f5f5;
   border-radius: 4px;
   padding: 10px 15px;
@@ -70,4 +71,27 @@ export const Author = styled.Text`
   font-size: 13px;
   color: #666;
   margin-top: 2px;
+`;
+export const LoadingIndicator = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+`;
+export const LoadingIndicatorText = styled.Text`
+  font-size: 18px;
+  margin-right: 30px;
+  font-weight: bold;
+  color: #7159c1;
+`;
+export const LoadingMoreIndicator = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+export const LoadingMoreIndicatorText = styled.Text`
+  font-size: 12px;
+  margin-right: 30px;
+  font-weight: bold;
+  color: #7159c1;
 `;
